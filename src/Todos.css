@@ -28,7 +28,7 @@
     padding: 8px;
     border: none;
     outline: none;
-    background-color:rgb(68, 128, 239) ;
+    background-color:rgb(103, 154, 248) ;
     cursor: pointer;
     color: white;
 }
@@ -53,7 +53,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    animation: popup 0.7s ease-out;
 }
+
 .todoBox:hover{
     background-color:rgba(129, 164, 230, 0.459) ;
 }
@@ -66,7 +68,43 @@
 .editIcon{
     font-size: 21px;
     margin-right: 5px;
+    animation:iconAnimation infinite 1s;
 }
 .editIcon,.closeIcon{
     cursor: pointer;
 }
+
+.buttonPopupNow{
+    animation: buttonPopup 1.4s infinite;
+}
+
+@keyframes popup{
+    0%{
+        background-color: rgb(251, 251, 251);
+    }
+    100%{
+        background-color: rgb(77, 250, 50);
+    }
+}
+
+@keyframes buttonPopup{
+    0%{
+        background-color: rgb(226, 220, 255);
+    }
+    100%{
+        background-color: rgb(44, 2, 254);
+    }
+}
+
+@keyframes iconAnimation{
+    0%{
+        font-size: 21px;
+    }
+    50%{
+        font-size: 23px;
+    }
+    100%{
+        font-size: 21px;
+    }
+}
+
