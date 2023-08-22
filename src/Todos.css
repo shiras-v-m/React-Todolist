@@ -1,0 +1,72 @@
+.container{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+.todosContainer{
+    width: 700px;
+    margin-top: 30px;
+    background: white;
+    padding: 20px 20px;
+    box-shadow: 0 0 5px black;
+    margin-bottom: 30px;
+
+}
+.todoHeading{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.inputBox{
+    display: flex;
+
+}
+.addBtn{
+    margin-left: 10px;
+    border-radius: 12px;
+    padding: 8px;
+    border: none;
+    outline: none;
+    background-color:rgb(68, 128, 239) ;
+    cursor: pointer;
+    color: white;
+}
+.inputField{
+    width: 100%;
+    border: 0.8px solid rgb(208, 153, 0);
+    outline: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 16px;
+}
+.inputField:focus:hover{
+    border: 2px solid rgb(208, 153, 0);
+}
+
+
+.todoBox{
+    border-radius: 6px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color:rgba(129, 164, 230, 0.185) ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.todoBox:hover{
+    background-color:rgba(129, 164, 230, 0.459) ;
+}
+.checkBox{
+    margin-right: 4px;
+}
+.todoText{
+    font-size: 17px;
+}
+.editIcon{
+    font-size: 21px;
+    margin-right: 5px;
+}
+.editIcon,.closeIcon{
+    cursor: pointer;
+}
