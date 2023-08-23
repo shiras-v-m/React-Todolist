@@ -7,11 +7,11 @@ function Todos() {
     const [editItemIndex, setEditItemIndex] = useState(0)
     const [completedCount, setCompletedCount] = useState(0)
 
-    console.log(userInput);
-    console.log(todos);
+    // console.log(userInput);
+    // console.log(todos);
     useEffect(()=>{
         let items=JSON.parse(localStorage.getItem('todos'))
-        console.log(items);
+        // console.log(items);
         items ? setTodos([...items]) : setTodos([])
         let count=0
         items.filter((item)=>{
@@ -40,17 +40,17 @@ function Todos() {
         obj[index].completed = !obj[index].completed
         setTodos([...obj])
         localStorage.setItem('todos',JSON.stringify([...obj]))
-        console.log(obj[index]);
+        // console.log(obj[index]);
         obj[index].completed === true ? setCompletedCount(completedCount + 1) : setCompletedCount(completedCount - 1)
     }
     const handleUpdate = () => {
         let obj = todos
         let index = editItemIndex
-        console.log("index ", index);
+        // console.log("index ", index);
         obj[editItemIndex].userInput = userInput
         setTodos([...obj])
         localStorage.setItem('todos',JSON.stringify([...obj]))
-        console.log(obj[editItemIndex]);
+        // console.log(obj[editItemIndex]);
         setEditFlag(false)
         setUserInput('')
 

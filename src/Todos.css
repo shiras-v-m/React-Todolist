@@ -63,7 +63,8 @@
     margin-right: 4px;
 }
 .todoText{
-    font-size: 17px;
+    font-size: 18px;
+    font-weight: bold;
 }
 .editIcon{
     font-size: 21px;
