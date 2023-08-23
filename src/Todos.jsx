@@ -104,7 +104,7 @@ function Todos() {
                 {
                     todos.length > 0 &&
                     <div className="taskDone" style={{ display: 'flex' }}>
-                        <h4>{completedCount} of {todos.length}  </h4> <span style={{ paddingLeft: '5px' }}>task completed</span>
+                        <h4>{completedCount} of {todos.length}  </h4> <span style={{ paddingLeft: '5px' }}>task{completedCount>1 && 's'} completed</span>
                     </div>
                 }
             </div>
