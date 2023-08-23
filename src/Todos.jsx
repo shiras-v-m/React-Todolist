@@ -13,12 +13,21 @@ function Todos() {
         let items=JSON.parse(localStorage.getItem('todos'))
         console.log(items);
         items ? setTodos([...items]) : setTodos([])
+        let count=0
+        items.filter((item)=>{
+            if(item.completed===true)
+                return count=count+1
+          })
+          setCompletedCount(count)
+       
     },[])
+
+ 
     //  Alt + down / up =to change the position of a statement to down / up
     // shift + Alt + down = to copy a statement and paste it to bottom line
     // ctrl + Alt + down/up = to change the content simultaneously
     // ctrl + Alt + right arrow = switch to split screen
-
+    // ctrl +shift + L = to change the value simultaneously
     const handleAdd = () => {
         setTodos([...todos, { userInput: userInput, completed: false }])
         setUserInput('')
